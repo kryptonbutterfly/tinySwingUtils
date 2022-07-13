@@ -4,7 +4,7 @@ module de.tinycodecrank.SwingUtils
 	exports de.tinycodecrank.util.swing.model;
 	exports de.tinycodecrank.util.swing;
 	
-	requires Monads;
+	requires de.tinycodecrank.Monads;
 	requires transitive java.desktop;
-	requires mathUtils;
+	requires de.tinycodecrank.mathUtils;
 }
