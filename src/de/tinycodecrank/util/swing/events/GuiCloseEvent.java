@@ -1,6 +1,6 @@
 package de.tinycodecrank.util.swing.events;
 
-import de.tinycodecrank.monads.Opt;
+import de.tinycodecrank.monads.opt.Opt;
 
 public class GuiCloseEvent<C>
 {

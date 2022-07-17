@@ -1,6 +1,6 @@
 package de.tinycodecrank.util.swing;
 
-import de.tinycodecrank.monads.Opt;
+import de.tinycodecrank.monads.opt.Opt;
 
 public abstract class BusinessLogicTemplate<Gui extends ObservableGui<?, ?, Args>, Args>
 {

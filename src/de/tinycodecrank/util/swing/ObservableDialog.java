@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 
 import javax.swing.JDialog;
 
-import de.tinycodecrank.monads.Opt;
+import de.tinycodecrank.monads.opt.Opt;
 import de.tinycodecrank.util.swing.events.GuiCloseEvent;
 import de.tinycodecrank.util.swing.events.GuiCloseEvent.Result;
 
