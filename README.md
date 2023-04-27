@@ -4,7 +4,7 @@ A utility for swing guis.
 ## Download
 java version | library version | Download
 :----------: | :-------------: | :-------
-18+          | 1.0.0           | [**tinySwingUtils.jar**](https://github.com/tinycodecrank/tinySwingUtils/releases/download/v1.0.0/tinySwingUtils.jar)
+18+          | 2.0.0           | [**tinySwingUtils.jar**](https://github.com/tinycodecrank/tinySwingUtils/releases/download/v2.0.0/tinySwingUtils.jar)
 
 ## Dependencies
 

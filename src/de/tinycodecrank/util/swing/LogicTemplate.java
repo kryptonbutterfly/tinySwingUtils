@@ -2,11 +2,11 @@ package de.tinycodecrank.util.swing;
 
 import de.tinycodecrank.monads.opt.Opt;
 
-public abstract class BusinessLogicTemplate<Gui extends ObservableGui<?, ?, Args>, Args>
+public abstract class LogicTemplate<Gui extends ObservableWindow<?, ?, ?, Args>, Args>
 {
 	protected Opt<Gui> gui;
 	
-	protected BusinessLogicTemplate(Gui gui)
+	protected LogicTemplate(Gui gui)
 	{
 		this.gui = Opt.of(gui);
 	}
@@ -16,6 +16,5 @@ public abstract class BusinessLogicTemplate<Gui extends ObservableGui<?, ?, Args
 		this.gui = Opt.empty();
 	}
 	
-	protected void disposeAction()
-	{}
+	protected abstract void disposeAction();
 }
