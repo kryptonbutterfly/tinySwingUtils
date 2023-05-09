@@ -1,12 +1,14 @@
 package de.tinycodecrank.util.swing;
 
+import java.awt.Window;
+
 import de.tinycodecrank.monads.opt.Opt;
 
-public abstract class BusinessLogicTemplate<Gui extends ObservableGui<?, ?, Args>, Args>
+public abstract class Logic<Gui extends Window, Args>
 {
 	protected Opt<Gui> gui;
 	
-	protected BusinessLogicTemplate(Gui gui)
+	protected Logic(Gui gui)
 	{
 		this.gui = Opt.of(gui);
 	}

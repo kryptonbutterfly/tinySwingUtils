@@ -9,21 +9,21 @@ import de.tinycodecrank.monads.opt.Opt;
 import de.tinycodecrank.util.swing.events.GuiCloseEvent;
 import de.tinycodecrank.util.swing.events.GuiCloseEvent.Result;
 
-public abstract class ObservableGui<Logic extends BusinessLogicTemplate<?, Args>, R, Args> extends JFrame
+public abstract class ObservableGui<BL extends Logic<?, Args>, R, Args> extends JFrame
 {
 	private static final long serialVersionUID = 1L;
 	
 	private Opt<Consumer<GuiCloseEvent<R>>>	closeListener;
-	protected Opt<Logic>					businessLogic;
+	protected Opt<BL>					businessLogic;
 	
-	private Logic createBusinessLogic()
+	private BL createBusinessLogic()
 	{
 		
 		// FIXME null
 		return createBusinessLogic(null);
 	}
 	
-	protected abstract Logic createBusinessLogic(Args args);
+	protected abstract BL createBusinessLogic(Args args);
 	
 	private static Opt<Image> defaultAppIcon = Opt.empty();
 	
@@ -56,7 +56,7 @@ public abstract class ObservableGui<Logic extends BusinessLogicTemplate<?, Args>
 	public final void dispose(GuiCloseEvent<R> event)
 	{
 		disposeAction();
-		this.businessLogic.if_(Logic::disposeAction);
+		this.businessLogic.if_(BL::disposeAction);
 		this.businessLogic.if_(bL ->
 		{
 			this.businessLogic = Opt.empty();

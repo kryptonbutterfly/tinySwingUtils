@@ -10,17 +10,17 @@ import de.tinycodecrank.util.swing.events.GuiCloseEvent;
 import de.tinycodecrank.util.swing.events.GuiCloseEvent.Result;
 
 @SuppressWarnings("serial")
-public abstract class ObservableDialog<Logic extends DialogLogicTemplate<?, Args>, R, Args> extends JDialog
+public abstract class ObservableDialog<BL extends Logic<?, Args>, R, Args> extends JDialog
 {
 	private Opt<Consumer<GuiCloseEvent<R>>>	closeListener;
-	protected Opt<Logic>					businessLogic;
+	protected Opt<BL>						businessLogic;
 	
-	private Logic createBusinessLogic()
+	private BL createBusinessLogic()
 	{
 		return createBusinessLogic(null);
 	}
 	
-	protected abstract Logic createBusinessLogic(Args args);
+	protected abstract BL createBusinessLogic(Args args);
 	
 	public ObservableDialog(Window owner, ModalityType modality, Consumer<GuiCloseEvent<R>> closeListener)
 	{
@@ -51,7 +51,7 @@ public abstract class ObservableDialog<Logic extends DialogLogicTemplate<?, Args
 	public final void dispose(GuiCloseEvent<R> event)
 	{
 		disposeAction();
-		this.businessLogic.if_(Logic::disposeAction);
+		this.businessLogic.if_(BL::disposeAction);
 		this.businessLogic.if_(bL ->
 		{
 			this.businessLogic = Opt.empty();
