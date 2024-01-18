@@ -1,4 +1,4 @@
-package de.tinycodecrank.util.swing.template.settings;
+package kryptonbutterfly.util.swing.template.settings;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;
@@ -8,11 +8,11 @@ import java.lang.annotation.Target;
 
 @Retention(RUNTIME)
 @Target(FIELD)
-public @interface FloatSpinner
+public @interface ByteSpinner
 {
-	float min() default 0;
+	byte min() default Byte.MIN_VALUE;
 	
-	float max() default 1;
+	byte max() default Byte.MAX_VALUE;
 	
-	float stepSize() default 0.05F;
+	byte stepSize() default 1;
 }

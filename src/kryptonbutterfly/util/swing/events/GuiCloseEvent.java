@@ -1,6 +1,6 @@
-package de.tinycodecrank.util.swing.events;
+package kryptonbutterfly.util.swing.events;
 
-import de.tinycodecrank.monads.opt.Opt;
+import kryptonbutterfly.monads.opt.Opt;
 
 public class GuiCloseEvent<C>
 {

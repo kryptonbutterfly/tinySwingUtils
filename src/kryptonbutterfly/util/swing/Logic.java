@@ -1,8 +1,8 @@
-package de.tinycodecrank.util.swing;
+package kryptonbutterfly.util.swing;
 
 import java.awt.Window;
 
-import de.tinycodecrank.monads.opt.Opt;
+import kryptonbutterfly.monads.opt.Opt;
 
 public abstract class Logic<Gui extends Window, Args>
 {

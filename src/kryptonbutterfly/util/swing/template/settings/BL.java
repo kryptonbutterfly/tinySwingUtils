@@ -1,4 +1,4 @@
-package de.tinycodecrank.util.swing.template.settings;
+package kryptonbutterfly.util.swing.template.settings;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -27,10 +27,10 @@ import javax.swing.ListCellRenderer;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.text.JTextComponent;
 
-import de.tinycodecrank.monads.opt.Opt;
-import de.tinycodecrank.reflectionUtils.Accessor;
-import de.tinycodecrank.util.swing.ApplyAbortPanel;
-import de.tinycodecrank.util.swing.Logic;
+import kryptonbutterfly.monads.opt.Opt;
+import kryptonbutterfly.reflectionUtils.Accessor;
+import kryptonbutterfly.util.swing.ApplyAbortPanel;
+import kryptonbutterfly.util.swing.Logic;
 import lombok.SneakyThrows;
 
 final class BL<Prefs, T extends Window> extends Logic<T, Consumer<T>>
@@ -59,8 +59,7 @@ final class BL<Prefs, T extends Window> extends Logic<T, Consumer<T>>
 	
 	void apply(ActionEvent ae)
 	{
-		gui.if_(gui ->
-		{
+		gui.if_(gui -> {
 			persist.forEach(Runnable::run);
 			gui.dispose();
 		});

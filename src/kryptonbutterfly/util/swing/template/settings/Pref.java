@@ -1,4 +1,4 @@
-package de.tinycodecrank.util.swing.template.settings;
+package kryptonbutterfly.util.swing.template.settings;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;
@@ -8,11 +8,9 @@ import java.lang.annotation.Target;
 
 @Retention(RUNTIME)
 @Target(FIELD)
-public @interface ShortSpinner
+public @interface Pref
 {
-	short min() default Short.MIN_VALUE;
+	String name();
 	
-	short max() default Short.MAX_VALUE;
-	
-	short stepSize() default 1;
+	String tooltip();
 }

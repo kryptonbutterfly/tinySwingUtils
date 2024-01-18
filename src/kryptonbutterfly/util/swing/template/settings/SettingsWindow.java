@@ -1,10 +1,10 @@
-package de.tinycodecrank.util.swing.template.settings;
+package kryptonbutterfly.util.swing.template.settings;
 
 import java.util.function.Consumer;
 
-import de.tinycodecrank.util.swing.ObservableGui;
-import de.tinycodecrank.util.swing.events.GuiCloseEvent;
-import de.tinycodecrank.util.swing.template.IWindowState;
+import kryptonbutterfly.util.swing.ObservableGui;
+import kryptonbutterfly.util.swing.events.GuiCloseEvent;
+import kryptonbutterfly.util.swing.template.IWindowState;
 
 @SuppressWarnings("serial")
 public final class SettingsWindow<Prefs> extends ObservableGui<BL<Prefs, SettingsWindow<Prefs>>, Void, Consumer<SettingsWindow<Prefs>>> implements BL.SettingsGui<Prefs, SettingsWindow<Prefs>>

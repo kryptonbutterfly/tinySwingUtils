@@ -1,4 +1,4 @@
-package de.tinycodecrank.util.swing.model;
+package kryptonbutterfly.util.swing.model;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -7,7 +7,7 @@ import javax.swing.ListModel;
 import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
 
-import de.tinycodecrank.math.utils.limit.LimitInt;
+import kryptonbutterfly.math.utils.limit.LimitInt;
 
 public class GeneralListModel<E> implements ListModel<E>
 {

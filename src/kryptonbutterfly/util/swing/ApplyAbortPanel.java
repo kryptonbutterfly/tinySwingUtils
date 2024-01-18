@@ -1,4 +1,4 @@
-package de.tinycodecrank.util.swing;
+package kryptonbutterfly.util.swing;
 
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;

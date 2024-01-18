@@ -1,4 +1,4 @@
-package de.tinycodecrank.util.swing.template;
+package kryptonbutterfly.util.swing.template;
 
 import java.awt.Component;
 import java.awt.Frame;

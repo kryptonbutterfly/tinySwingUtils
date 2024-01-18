@@ -1,11 +1,11 @@
-package de.tinycodecrank.util.swing.template.settings;
+package kryptonbutterfly.util.swing.template.settings;
 
 import java.awt.Window;
 import java.util.function.Consumer;
 
-import de.tinycodecrank.util.swing.ObservableDialog;
-import de.tinycodecrank.util.swing.events.GuiCloseEvent;
-import de.tinycodecrank.util.swing.template.IWindowState;
+import kryptonbutterfly.util.swing.ObservableDialog;
+import kryptonbutterfly.util.swing.events.GuiCloseEvent;
+import kryptonbutterfly.util.swing.template.IWindowState;
 
 @SuppressWarnings("serial")
 public final class SettingsDialog<Prefs> extends ObservableDialog<BL<Prefs, SettingsDialog<Prefs>>, Void, Consumer<SettingsDialog<Prefs>>> implements BL.SettingsGui<Prefs, SettingsDialog<Prefs>>

@@ -1,14 +1,14 @@
-module de.tinycodecrank.SwingUtils
+module kryptonbutterfly.SwingUtils
 {
-	exports de.tinycodecrank.util.swing.events;
-	exports de.tinycodecrank.util.swing.model;
-	exports de.tinycodecrank.util.swing;
-	exports de.tinycodecrank.util.swing.template;
-	exports de.tinycodecrank.util.swing.template.settings;
+	exports kryptonbutterfly.util.swing.events;
+	exports kryptonbutterfly.util.swing.model;
+	exports kryptonbutterfly.util.swing;
+	exports kryptonbutterfly.util.swing.template;
+	exports kryptonbutterfly.util.swing.template.settings;
 	
-	requires de.tinycodecrank.Monads;
+	requires kryptonbutterfly.Monads;
 	requires transitive java.desktop;
-	requires de.tinycodecrank.mathUtils;
-	requires de.tinycodecrank.ReflectionUtils;
+	requires kryptonbutterfly.mathUtils;
+	requires kryptonbutterfly.ReflectionUtils;
 	requires lombok;
 }
