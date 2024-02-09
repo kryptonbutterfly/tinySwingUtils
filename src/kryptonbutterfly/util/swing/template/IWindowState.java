@@ -3,6 +3,7 @@ package kryptonbutterfly.util.swing.template;
 import java.awt.Component;
 import java.awt.Frame;
 
+@Deprecated(forRemoval = true, since = "3.1.0")
 public interface IWindowState
 {
 	/**
