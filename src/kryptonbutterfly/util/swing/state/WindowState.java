@@ -62,6 +62,8 @@ public final class WindowState implements IWindowState
 	public void setBoundsAndState(Frame target)
 	{
 		setBounds(target);
+		if (this.state == null)
+			this.state = ExtendedState.NORMAL;
 		target.setExtendedState(state.toIntState());
 	}
 	
