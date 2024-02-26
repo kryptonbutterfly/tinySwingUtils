@@ -4,7 +4,7 @@ import java.util.function.Consumer;
 
 import kryptonbutterfly.util.swing.ObservableGui;
 import kryptonbutterfly.util.swing.events.GuiCloseEvent;
-import kryptonbutterfly.util.swing.template.IWindowState;
+import kryptonbutterfly.util.swing.state.WindowState;
 
 @SuppressWarnings("serial")
 public final class SettingsWindow<Prefs> extends ObservableGui<BL<Prefs, SettingsWindow<Prefs>>, Void, Consumer<SettingsWindow<Prefs>>> implements BL.SettingsGui<Prefs, SettingsWindow<Prefs>>
@@ -14,7 +14,7 @@ public final class SettingsWindow<Prefs> extends ObservableGui<BL<Prefs, Setting
 	
 	public SettingsWindow(
 		Consumer<GuiCloseEvent<Void>> closeListener,
-		IWindowState windowState,
+		WindowState windowState,
 		Prefs prefs,
 		int scrollUnitIncrement)
 	{

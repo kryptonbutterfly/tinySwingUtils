@@ -8,9 +8,8 @@ import java.awt.GraphicsEnvironment;
 
 import kryptonbutterfly.math.utils.limit.LimitInt;
 import kryptonbutterfly.monads.opt.Opt;
-import kryptonbutterfly.util.swing.template.IWindowState;
 
-public final class WindowState implements IWindowState
+public final class WindowState
 {
 	private static final WindowState DEFAULTS = new WindowState();
 	
@@ -46,7 +45,6 @@ public final class WindowState implements IWindowState
 	@PersistableValue
 	public ExtendedState	state	= ExtendedState.NORMAL;
 	
-	@Override
 	public void setBounds(Component target)
 	{
 		final var	screens	= GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices();
@@ -58,7 +56,6 @@ public final class WindowState implements IWindowState
 		target.setBounds(x, y, width, height);
 	}
 	
-	@Override
 	public void setBoundsAndState(Frame target)
 	{
 		setBounds(target);
@@ -67,13 +64,11 @@ public final class WindowState implements IWindowState
 		target.setExtendedState(state.toIntState());
 	}
 	
-	@Override
 	public void persistBounds(Component source)
 	{
 		persistBounds(source, ExtendedState.NORMAL);
 	}
 	
-	@Override
 	public void persistBoundsAndState(Frame source)
 	{
 		persistBounds(source, ExtendedState.getState(source.getExtendedState()));
