@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>kryptonbutterfly</groupId>
 	<artifactId>tiny_swing_utils</artifactId>
-	<version>3.1.1</version>
+	<version>3.1.2</version>
 	<name>SwingUtils</name>
 	<description>Some convenience stuff for swing.</description>
 	
@@ -47,6 +47,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.30</version>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 	
