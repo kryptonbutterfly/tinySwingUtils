@@ -20,6 +20,7 @@ public final class WindowState
 	{
 		this.posX	= posX;
 		this.posY	= posY;
+		this.width	= width;
 		this.height	= height;
 	}
 	

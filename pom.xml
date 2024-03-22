@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>kryptonbutterfly</groupId>
 	<artifactId>tiny_swing_utils</artifactId>
-	<version>4.0.0</version>
+	<version>4.0.1</version>
 	<name>SwingUtils</name>
 	<description>Some convenience stuff for swing.</description>
 	
